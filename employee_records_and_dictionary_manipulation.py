@@ -14,3 +14,11 @@ print(company_employees)
 company_employees["Engineering"]["David"] = {"age": 27, "role": "Data Scientist"}
 print("\nAfter adding David:")
 print(company_employees)
+
+def count_employees(company):
+    total = 0
+    for department in company.values():
+        total += len(department)
+    return total
+
+print("\nTotal number of employees:", count_employees(company_employees))
